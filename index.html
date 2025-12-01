@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ===================================
+       META TAGS AND CONFIGURATION
+       =================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Conference ticket generator</title>
+
+  <!-- ===================================
+       STYLES
+       =================================== -->
+  <link rel="stylesheet" href="./css/styles.css">
+  
+  <!-- Font preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400,500,700,800&display=swap" rel="stylesheet">
+  
+  <!-- Inline styles for attribution -->
+ 
+</head>
+
+<body>
+  <div class="container">
+    
+    <!-- ===================================
+         HEADER
+         =================================== -->
+    <header>
+      <img src="./assets/images/logo-full.svg" alt="Conference Logo">
+    </header>
+
+    <!-- ===================================
+         MAIN CONTENT
+         =================================== -->
+    <main class="main-content">
+      <!-- Page title and description -->
+      <h1 class="title">Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p class="description">Secure your spot at next year's biggest coding conference.</p>
+
+      <!-- ===================================
+           TICKET REGISTRATION FORM
+           =================================== -->
+      <form class="ticket-form">
+        
+        <!-- Avatar upload field -->
+        <div class="form-group avatar-upload">
+          <label for="avatar">Upload Avatar</label>
+          
+          <!-- Upload area (initial state) -->
+          <div class="upload-area" id="upload-area">
+            <p>Drag and drop or click to upload</p>
+            <input type="file" id="avatar" name="avatar" accept=".jpg, .jpeg, .png">
+          </div>
+          
+          <!-- Upload preview (shown after file selected) -->
+          <div class="upload-preview" id="upload-preview" style="display: none;">
+            <img id="avatar-preview" src="" alt="Avatar Preview">
+            <div class="upload-actions">
+              <button type="button" class="btn-secondary" id="remove-image">Remove image</button>
+              <button type="button" class="btn-secondary" id="change-image">Change image</button>
+            </div>
+          </div>
+          
+          <!-- Info message -->
+          <div class="info-text">
+            <img src="./assets/images/icon-info.svg" alt="Info Icon" class="info-icon" id="info-icon">
+            <small id="text-error">Upload your photo (JPG or PNG, max size: 500KB).</small>
+          </div>
+        </div>
+
+        <!-- Full name field -->
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" required>
+          <div class="input-error-msg">
+            <span class="input-text-error"></span>
+          </div>
+        </div>
+
+        <!-- Email address field -->
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
+          <div class="input-error-msg">
+            <span class="input-text-error"></span>
+          </div>
+        </div>
+
+        <!-- GitHub username field -->
+        <div class="form-group">
+          <label for="github-username">GitHub Username</label>
+          <input type="text" id="github-username" name="github-username" placeholder="@yourusername" required>
+          <div class="input-error-msg">
+            <span class="input-text-error"></span>
+          </div>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" id="generate-ticket">Generate My Ticket</button>
+      </form>
+    </main>
+
+    <!-- ===================================
+         FOOTER / ATTRIBUTION
+         =================================== -->
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>.
+      Coded by <a href="#" target="_blank" rel="noopener">Kostek</a>.
+    </div>
+
+  </div>
+
+  <!-- ===================================
+       SCRIPTS
+       =================================== -->
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ===================================
+       META TAGS AND CONFIGURATION
+       =================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Conference ticket generator</title>
+
+  <!-- ===================================
+       STYLES
+       =================================== -->
+  <link rel="stylesheet" href="./css/styles.css">
+  
+  <!-- Font preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400,500,700,800&display=swap" rel="stylesheet">
+  
+  <!-- Inline styles for attribution -->
+ 
+</head>
+
+<body>
+  <div class="container">
+    
+    <!-- ===================================
+         HEADER
+         =================================== -->
+    <header>
+      <img src="./assets/images/logo-full.svg" alt="Conference Logo 'Coding Conf'">
+    </header>
+
+    <!-- ===================================
+         MAIN CONTENT
+         =================================== -->
+    <main class="main-content">
+      
+      <!-- Success message -->
+      <h1 class="title">Congrats, <span id="title-name"></span> Your ticket is ready.</h1>
+      <p class="description description-ticket">
+        We've emailed your ticket to <span id="email-display"></span> and will send updates in the run up to the event.
+      </p>
+
+      <!-- ===================================
+           TICKET DISPLAY
+           =================================== -->
+      <div class="ticket">
+        
+        <!-- Conference information section -->
+        <div class="ticket-info">
+          <img class="ticket-info-logo" src="./assets/images/logo-mark.svg" alt="Conference Logo">
+          <div class="conference-details">
+            <h2 class="conference-name">Coding Conf</h2>
+            <p class="date-location">Jan 31, 2025 / Austin, TX</p>
+          </div>
+        </div>
+
+        <!-- Ticket holder information section -->
+        <div class="ticket-info">
+          <img class="avatar" src="./assets/images/avatar-example.jpg" alt="Avatar" id="avatar-img">
+          <div class="ticket-holder-details">
+            <h2 class="name" id="ticket-name"></h2>
+            <div class="github-info">
+              <img src="./assets/images/icon-github.svg" alt="GitHub Icon" class="github-icon">
+              <p class="github" id="github-display"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ticket number -->
+        <p id="ticket-number" class="ticket-number"></p>
+        
+      </div>
+    </main>
+
+    <!-- ===================================
+         FOOTER / ATTRIBUTION
+         =================================== -->
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>.
+      Coded by <a href="#" target="_blank" rel="noopener">Kostek</a>.
+    </div>
+
+  </div>
+
+  <!-- ===================================
+       SCRIPTS
+       =================================== -->
+  <script src="./js/ticket.js"></script>
+</body>
+
+</html>
