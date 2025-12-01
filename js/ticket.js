@@ -34,7 +34,7 @@ function populateTicketData(ticketData, avatarData) {
   // Insert GitHub username
   const githubDisplay = document.getElementById('github-display');
   if (githubDisplay) {
-    githubDisplay.textContent = '@' + ticketData.githubUsername;
+    githubDisplay.textContent = ticketData.githubUsername;
   }
   
   // Insert full name on ticket
