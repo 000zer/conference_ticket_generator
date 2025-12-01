@@ -97,7 +97,7 @@ githubInput.addEventListener('input', function() {
 avatarInput.addEventListener('change', function() {
   const file = this.files[0];
   
-  if (file.size <= 500 * 1024 && (file.type === 'image/jpg' || file.type === 'image/png')) {
+  if (file.size <= 500 * 1024 && (file.type === 'image/jpeg'  || file.type === 'image/png')) {
     const reader = new FileReader();
     reader.onload = function(e) {
       avatarPreview.src = e.target.result;
@@ -114,6 +114,7 @@ removeImageButton.addEventListener('click', function() {
   avatarPreview.src = '';
   uploadPreview.style.display = 'none';
   uploadArea.style.display = 'flex';
+  uploadArea.style.flexDirection = 'column';
 });
 
 // Change uploaded image
